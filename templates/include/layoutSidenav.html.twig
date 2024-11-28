@@ -3,13 +3,13 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Pages</div>
-                            <a class="nav-link" href="{{ path('app_article_view') }}">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                List
-                            </a>
                             <a class="nav-link" href="{{ path('app_article_create') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Create
+                            </a>
+                            <a class="nav-link" href="{{ path('app_article_view') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                List
                             </a>
                             <div class="sb-sidenav-menu-heading">Interface connexion</div>
                             <a class="nav-link" href="{{ path('app_login') }}">
@@ -23,6 +23,15 @@
                             <a class="nav-link" href="{{ path('app_logout') }}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Logout
+                            </a>
+                            <div class="sb-sidenav-menu-heading">Gestion catégories</div>
+                            <a class="nav-link" href="{{ path('app_categorie_create') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Create
+                            </a>
+                            <a class="nav-link" href="{{ path('app_categorie_view') }}">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Liste
                             </a>
                     </div>
                 </nav>

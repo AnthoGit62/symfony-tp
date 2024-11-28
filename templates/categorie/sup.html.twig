@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{% block title %}Hello CategorieController!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,14 +8,19 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    {% for message in app.flashes('success') %}
-        <div class="alert alert-success">
-            {{ message }}
-        </div>
-    {% endfor %}
-    {{form(form)}}
+<div class="row">
+
+<form>
+
+    <h1>Categorie {{ categorie.id }} supprimé avec succès ! ✅</h1>
+
+   
+
+</form>    
+
 </div>
+
+
 
 {% endblock %}
 

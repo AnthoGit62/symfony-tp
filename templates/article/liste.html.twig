@@ -14,8 +14,8 @@
                   <h5 class="card-title">{{ item.id }}</h5>
                   <p class="card-text">{{ item.texte }}</p>
                   <p class="card-text">{{  item.date | date("m/d/Y") }}</p>
-                  <a href="{{ path('app_article_update',  {'id': item.id}) }}" class="btn btn-primary">Modifier</a>
-                  <a href="{{ path('app_article_delete',  {'id': item.id}) }}" class="btn btn-primary">Supprimer</a>
+                  <a href="{{ path('app_article_update',  {'id': item.id}) }}" class="btn btn-warning">Modifier</a>
+                  <a href="{{ path('app_article_delete',  {'id': item.id}) }}" class="btn btn-danger">Supprimer</a>
                 </div>
             </div>
         {% endfor %}

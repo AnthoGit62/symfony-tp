@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CategorieController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row g-3"> 
+        {% for items in categorie %}
+            <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Catégorie {{ items.nom }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Numéro ID : {{ items.id }}</li>
+
+                  <a href="{{ path('app_categorie_update',  {'id': items.id}) }}" class="btn btn-warning">Modifier</a>
+                  <a href="{{ path('app_categorie_delete',  {'id': items.id}) }}" class="btn btn-danger">Supprimer</a>
+            </ul>
+            </div>
+        {% endfor %}
+    
+    </div>
+</div>
+{% endblock %}

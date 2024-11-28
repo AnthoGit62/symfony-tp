@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ArticleController!{% endblock %}
+{% block title %}Hello CategorieController!{% endblock %}
 
 {% block body %}
 <style>
@@ -9,13 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    {% for message in app.flashes('success') %}
+    {% for messages in app.flashes('success') %}
         <div class="alert alert-success">
-            {{ message }}
+            {{ messages }}
         </div>
     {% endfor %}
     {{form(form)}}
 </div>
+
+
 
 {% endblock %}
 
