@@ -10,9 +10,10 @@
             <div class="card col-md-3 col-sm-6 col-12">
                 <div class="card-body">
                     <img style="max-height:12em;"class="card-img-top " src="{{ asset('uploads/brochures/' ~ item.nomimage) }}">
+                    <h5 class="card-title">{{ item.id }}</h5>
                   <h5 class="card-title">{{ item.titre }}</h5>
-                  <h5 class="card-title">{{ item.id }}</h5>
                   <p class="card-text">{{ item.texte }}</p>
+                  <p class="card-text">Categorie : {{ item.categorie.nom }}</p>
                   <p class="card-text">{{  item.date | date("m/d/Y") }}</p>
                   <a href="{{ path('app_article_update',  {'id': item.id}) }}" class="btn btn-warning">Modifier</a>
                   <a href="{{ path('app_article_delete',  {'id': item.id}) }}" class="btn btn-danger">Supprimer</a>

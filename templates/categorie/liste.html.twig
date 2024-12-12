@@ -13,7 +13,7 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">Numéro ID : {{ items.id }}</li>
-
+                  <a href="{{ path('app_article_viewById',  {'id': items.id}) }}" class="btn btn-success">Voir tous les articles</a>
                   <a href="{{ path('app_categorie_update',  {'id': items.id}) }}" class="btn btn-warning">Modifier</a>
                   <a href="{{ path('app_categorie_delete',  {'id': items.id}) }}" class="btn btn-danger">Supprimer</a>
             </ul>

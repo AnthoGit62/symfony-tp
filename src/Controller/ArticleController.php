@@ -83,6 +83,19 @@ class ArticleController extends AbstractController
         ]);
     }
 
+    #[Route('/article/liste/{id}', name: 'app_article_viewById')]
+    public function viewById(EntityManagerInterface $entityManager, int $id): Response
+    {
+        
+        $article = $entityManager->getRepository(Article::class)->findBy(['categorie' => $id]);
+
+        return $this->render('article/liste.html.twig', [
+            'controller_name' => 'ArticleController',
+            'titre' => 'Article',
+            'article' => $article,
+        ]);
+    }
+
     #[IsGranted('IS_AUTHENTICATED_FULLY')]
     #[Route('/article/maj/{id}', name: 'app_article_update')]
     public function update(Request $request, EntityManagerInterface $entityManager, int $id): Response

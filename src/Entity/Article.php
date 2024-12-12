@@ -29,6 +29,9 @@ class Article
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $nom_image = null;
 
+    #[ORM\ManyToOne(inversedBy: 'articles')]
+    private ?Categorie $categorie = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +93,18 @@ class Article
     public function setNomImage(?string $nom_image): static
     {
         $this->nom_image = $nom_image;
+
+        return $this;
+    }
+
+    public function getCategorie(): ?Categorie
+    {
+        return $this->categorie;
+    }
+
+    public function setCategorie(?Categorie $categorie): static
+    {
+        $this->categorie = $categorie;
 
         return $this;
     }
